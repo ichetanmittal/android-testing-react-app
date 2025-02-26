@@ -57,6 +57,7 @@ function App() {
         >
           Go to Settings
         </button>
+        */}
         
         <button 
           onClick={() => navigateToNativeScreen('profile')}
@@ -65,6 +66,7 @@ function App() {
           Go to Profile
         </button>
         
+        {/* Commented out as requested
         <button 
           onClick={() => showNativeToast('Hello from React!')}
           className="nav-button toast-button"
