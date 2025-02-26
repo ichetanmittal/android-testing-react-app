@@ -40,8 +40,6 @@ function App() {
       <h1>Android Testing React App</h1>
       
       <div className="description">
-        <p>This React app demonstrates communication between web content and native Android code.</p>
-        <p>Click the buttons below to navigate to different screens in the Android app.</p>
       </div>
       
       <div className="button-container">
@@ -52,6 +50,7 @@ function App() {
           Go to Home Screen
         </button>
         
+        {/* Commented out as requested
         <button 
           onClick={() => navigateToNativeScreen('settings')}
           className="nav-button settings-button"
@@ -72,6 +71,7 @@ function App() {
         >
           Show Toast Message
         </button>
+        */}
         
         <button 
           onClick={() => navigateToAppScreen('TestActivity')}
