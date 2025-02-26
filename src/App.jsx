@@ -15,6 +15,18 @@ function App() {
     }
   };
 
+  const navigateToAppScreen = (className) => {
+    // Check if we're running in Android WebView
+    if (window.AndroidBridge) {
+      // Call the native method
+      window.AndroidBridge.navigateToAppScreen(className);
+    } else {
+      // For testing in browser
+      console.log(`Would navigate to ${className} if in Android WebView`);
+      alert(`Would navigate to ${className} if in Android WebView`);
+    }
+  };
+
   const showNativeToast = (message) => {
     if (window.AndroidBridge) {
       window.AndroidBridge.showToast(message);
@@ -59,6 +71,13 @@ function App() {
           className="nav-button toast-button"
         >
           Show Toast Message
+        </button>
+        
+        <button 
+          onClick={() => navigateToAppScreen('TestActivity')}
+          className="nav-button test-button"
+        >
+          Go to Test Page
         </button>
       </div>
     </div>
