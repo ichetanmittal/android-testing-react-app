@@ -59,12 +59,14 @@ function App() {
         </button>
         */}
         
+        {/* Commented out as requested
         <button 
           onClick={() => navigateToNativeScreen('profile')}
           className="nav-button profile-button"
         >
           Go to Profile
         </button>
+        */}
         
         {/* Commented out as requested
         <button 
